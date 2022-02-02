@@ -8,10 +8,22 @@
 </head>
 <body>
 
-  <h3>Score:<span id="result"></span></h3>
+  <h3>Score:<span id="result"></span></h3> 
 
   <div class="grid">
   </div>
 
+  <script>
+    let taulerr =document.querySelector(".grid")
+    let marcador = document.getElementById("result")
+
+    taulerr.addEventListener('mouseover', () =>{
+      marcador.style.fontSize = 30
+    })
+    taulerr.addEventListener('mouseout', () => {
+      marcador.style.fontSize = 20 
+    })
+  </script>
+  
 </body>
 </html>
