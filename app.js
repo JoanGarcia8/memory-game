@@ -114,6 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenId.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
+
+    let divImatges = document.querySelector(".alimentos")
+    const imatge = document.createElement('div')
+    const imatgeContent = `
+    <img style="position:absolute" src=${cardArray[cardId].img}>
+    ` 
+    imatge.innerHTML = imatgeContent
+    divImatges.append(imatge)
+
     if (cardsChosen.length ===2) {
       setTimeout(checkForMatch, 500)
     }
