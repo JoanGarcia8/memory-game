@@ -4,3 +4,8 @@
   width: 400px;
   height: 300px;
 }
+#MarcadorVides{
+  position: relative;
+  left: 300px;
+  bottom: 38px
+}

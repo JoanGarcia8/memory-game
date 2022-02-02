@@ -75,11 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
+    let vides = document.getElementById("vides")
     
     if(optionOneId == optionTwoId) {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('You have clicked the same image!')
+      contador--
+      vides.innerHTML = contador
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
@@ -92,7 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('Sorry, try again')
+      contador--
+      vides.innerHTML = contador
     }
+    if (contador == 0) 
+    alert('Has perdut Joan Garcia Sanchez!')
     cardsChosen = []
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length

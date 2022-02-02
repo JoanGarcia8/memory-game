@@ -9,8 +9,8 @@
 <body>
 
   <h3>Score:<span id="result"></span></h3> 
-
-  <div class="grid">
+  <h3 id="MarcadorVides">Vides:<span id="vides">4</span></h3>
+  <div class="grid"> 
   </div>
 
   <script>
@@ -18,12 +18,15 @@
     let marcador = document.getElementById("result")
 
     taulerr.addEventListener('mouseover', () =>{
-      marcador.style.fontSize = 30
+      marcador.style.fontSize = 30 + "px"
     })
     taulerr.addEventListener('mouseout', () => {
-      marcador.style.fontSize = 20 
+      marcador.style.fontSize = 20 + "px"
     })
   </script>
-  
+
+  <script>
+  let contador = 4;
+  </script>
 </body>
 </html>
